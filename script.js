@@ -1,3 +1,5 @@
+ 
+
  // ===== DATA & VARIABEL GLOBAL =====
         let transactions = [];
         let transactionIdCounter = 1;
