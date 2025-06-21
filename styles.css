@@ -1,0 +1,3 @@
+body.dark {@apply bg-gray-900}
+.dark-mode .accent {@apply text-orange-600}
+.light-mode .accent {@apply text-blue-800}

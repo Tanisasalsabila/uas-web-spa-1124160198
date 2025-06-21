@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Open Payment Portal</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="./dist/output.css" rel="stylesheet">
+</head>
+<body class="transition-all min-h-screen bg-gray-100 dark:bg-gray-800 text-blue dark:text-orange">
+        
+<!-- Toggle Dark Mode -->
+        <div class="flex justify-end p-4 mb-7">
+            <button id="darkModeToggle" class="px-4 py-2 bg-gray-200 dark:bg-gray-700 rounded-lg flex items-center space-x-5">
+                <span class="dark:hidden">🌙</span>
+                <span class="hidden dark:block">☀️</span>
+                <span class="dark:hidden">Dark Mode</span>
+                <span class="hidden dark:block">Light Mode</span>
+            </button>
+        </div>
+
+        <!--header-->
+    <span class="inline-grid grid-cols-3 gap-none">
+        <span><img src="assets/buat logo.svg" class="h-20 w-20 rounded-full"></span>
+        <span><img src="assets/logo global.png" class="h-20 w-20"></span>
+    </span>
+    <div class="text-center mb-8">
+            <h1 class="text-2xl font-bold text-blue-800 dark:text-orange-400">Open Payment Portal <br> Global Institute</h1>
+            <p class="text-1xl text-blue-400 dark:text-orange-400">NIM : 1124160198 <BR> Nama : Tanisa Salsabila</p>
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <script>
+// Script untuk toggle dark mode
+        const darkModeToggle = document.getElementById('darkModeToggle');
+
+// Cek preferensi dark mode dari localStorage
+        if (localStorage.getItem('darkMode') === 'enabled') {
+            document.documentElement.classList.add('dark');
+        }
+
+// Event listener untuk toggle dark mode
+        darkModeToggle.addEventListener('click', () => {
+            document.documentElement.classList.toggle('dark');
+
+// Simpan preferensi ke localStorage
+            if (document.documentElement.classList.contains('dark')) {
+                localStorage.setItem('darkMode', 'enabled');
+            } else {
+                localStorage.setItem('darkMode', null);
+            }
+        });
+    </script>
+</body>
+</html>
