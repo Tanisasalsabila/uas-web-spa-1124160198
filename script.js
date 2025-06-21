@@ -1,5 +1,23 @@
  
+// Script untuk toggle dark mode
+        const darkModeToggle = document.getElementById('darkModeToggle');
 
+// Cek preferensi dark mode dari localStorage
+        if (localStorage.getItem('darkMode') === 'enabled') {
+            document.documentElement.classList.add('dark');
+        }
+
+// Event listener untuk toggle dark mode
+        darkModeToggle.addEventListener('click', () => {
+            document.documentElement.classList.toggle('dark');
+
+// Simpan preferensi ke localStorage
+            if (document.documentElement.classList.contains('dark')) {
+                localStorage.setItem('darkMode', 'enabled');
+            } else {
+                localStorage.setItem('darkMode', null);
+            }
+        });
  // ===== DATA & VARIABEL GLOBAL =====
         let transactions = [];
         let transactionIdCounter = 1;
@@ -384,6 +402,23 @@
             }
         });
 
+    const promoCodes = {
+    "DISKON10": {
+        type: "percentage",     // diskon persentase
+        discount: 10,           // 10% potongan
+        description: "Potongan 10% untuk semua produk"
+    },
+    "HEMAT50K": {
+        type: "fixed",          // diskon tetap
+        discount: 50000,        // potongan Rp 50.000
+        description: "Diskon tetap sebesar Rp 50.000"
+    },
+    "STUDENT20": {
+        type: "percentage",
+        discount: 20,
+        description: "Diskon 20% khusus pelajar"
+    }
+};
         // ===== INISIALISASI =====
         
         // Initialize app
