@@ -8,7 +8,7 @@
     <link href="./dist/output.css" rel="stylesheet">
 </head>
 <body class="transition-all min-h-screen bg-gray-100 dark:bg-gray-800 text-blue dark:text-orange">
-       <header class="bg-gray-100 dark:bg-gray-700 flex items-center justify-between px-6 mb-6">
+       <header class="bg-white dark:bg-gray-700 flex items-center justify-between px-6 mb-6">
         <span class="inline-grid grid-cols-3 gap-3">
         <span><img src="assets/buat logo.svg" class="h-20 w-20 rounded-full"></span>
         <span><img src="assets/logo global.png" class="h-20 w-20"></span></span>
@@ -175,7 +175,7 @@
                 </form>
             </div>
 <!-- Riwayat Transaksi -->
-            <div class="bg-white rounded-xl shadow-lg p-6">
+            <div class="bg-gray-100 dark:bg-gray-700 rounded-xl shadow-lg p-6">
                 <div class="flex items-center justify-between mb-6">
                     <div class="flex items-center">
                         <svg class="w-6 h-6 text-green-600 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -191,6 +191,20 @@
                     </button>
                 </div>
 
-
+<!-- Statistics -->
+                <div class="grid grid-cols-3 gap-4 mb-6">
+                    <div class="text-center p-3 bg-blue-50 rounded-lg">
+                        <div class="text-2xl font-bold text-blue-600" id="totalTransactions">0</div>
+                        <div class="text-sm text-gray-600">Transaksi</div>
+                    </div>
+                    <div class="text-center p-3 bg-green-50 rounded-lg">
+                        <div class="text-2xl font-bold text-green-600" id="totalRevenue">Rp 0</div>
+                        <div class="text-sm text-gray-600">Pendapatan</div>
+                    </div>
+                    <div class="text-center p-3 bg-purple-50 rounded-lg">
+                        <div class="text-2xl font-bold text-purple-600" id="avgTransaction">Rp 0</div>
+                        <div class="text-sm text-gray-600">Rata-rata</div>
+                    </div>
+                </div>
 
         <script src="script.js"></script>
